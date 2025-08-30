@@ -1,0 +1,402 @@
+/* General Body Styles */
+:root {
+    --cherry-red: #B22222; /* Firebrick */
+    --burgundy: #800020;
+    --white: #FFFFFF;
+    --off-white: #f9f9f9;
+    --black: #333;
+    --grey: #555;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--off-white);
+    color: var(--black);
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--burgundy);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--grey);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cherry-red);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--black);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Main Content Styles */
+main {
+    padding-top: 2rem;
+}
+
+section {
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.welcome-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.welcome-section h1 #display-name {
+    color: var(--cherry-red);
+}
+
+/* Banner Section */
+/* Banner Section */
+.banner {
+    position: relative;
+    background-image: url("https://i.pinimg.com/736x/b8/e4/a4/b8e4a459364d4aec263851d9e69f9e48.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 578px; /* bisa kamu sesuaikan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* overlay biar teks kontras */
+}
+
+.banner h2 {
+    position: relative; /* biar teks muncul di atas overlay */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+
+/* Why Choose Us / Headquarters Section */
+.headquarters-section {
+    text-align: center;
+    background-color: var(--white);
+}
+
+.headquarters-section h2, .portfolio-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.locations {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.location-card {
+    flex-basis: 280px;
+}
+
+.circle-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--burgundy);
+}
+
+/* Portfolio Section */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+.portfolio-item {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.portfolio-caption {
+    padding: 1.5rem;
+}
+.portfolio-caption h3 {
+    margin-top: 0;
+    color: var(--burgundy);
+}
+
+
+/* Message Us Section */
+.message-us-section {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    align-items: flex-start;
+}
+
+.form-container, .output-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--off-white);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-container h2 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 0;
+    text-align: center;
+    color: var(--burgundy);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline-color: var(--cherry-red);
+}
+
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cherry-red);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--burgundy);
+}
+
+.error {
+    color: var(--cherry-red);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#form-output p {
+    word-wrap: break-word;
+}
+
+/* --- Profile Page Styles --- */
+.profile-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x400/000000/FFFFFF?text=Red+Wire+Co.') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 6rem 5%;
+}
+
+.profile-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.profile-content {
+    padding: 4rem 5%;
+}
+.profile-content.about-us {
+    background: var(--white);
+}
+
+.profile-content h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.content-image, .content-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.content-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.vision-mission-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vision-mission-container .card {
+    flex: 1;
+    min-width: 300px;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.vision-mission-container .card h3 {
+    color: var(--burgundy);
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: var(--black);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 68px; /* Adjust based on header height */
+        background-color: white;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.toggle .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger.toggle .line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.toggle .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .welcome-section h1, .profile-banner h1, .profile-content h2 {
+        font-size: 2rem;
+    }
+
+    .message-us-section, .content-wrapper {
+        flex-direction: column;
+    }
+}
